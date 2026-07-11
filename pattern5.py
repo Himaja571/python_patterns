@@ -1,16 +1,15 @@
-int n = 5;
+n = int(input("Enter the number of rows: "))
 
-for(int i = 0; i < n; i++) {
+for i in range(n):
+    num = 1
 
-    int num = 1;
+    # Print leading spaces
+    for j in range(n - i):
+        print(" ", end=" ")
 
-    for(int j = 0; j < n - i; j++)
-        System.out.print(" ");
+    # Print Pascal's Triangle numbers
+    for j in range(i + 1):
+        print(num, end=" ")
+        num = num * (i - j) // (j + 1)
 
-    for(int j = 0; j <= i; j++) {
-        System.out.print(num + " ");
-        num = num * (i - j) / (j + 1);
-    }
-
-    System.out.println();
-}
+    print()
